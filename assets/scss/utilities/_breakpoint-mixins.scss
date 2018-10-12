@@ -1,0 +1,45 @@
+// Breakpoints - to be used in mixins
+// less than 480px is default style, mobile-first approach
+$mobileUp: '(min-width: 480px)' !default;
+$tabletUp: '(min-width: 768px)' !default;
+$desktopUp: '(min-width: 992px)' !default;
+$widescreenUp: '(min-width: 1200px)' !default;
+
+// Breakpoints Mixins
+@mixin mobileUp {
+	@media #{$mobileUp} {
+		@content;
+	}
+}
+
+@mixin tabletUp {
+	@media #{$tabletUp} {
+		@content;
+	}
+}
+
+@mixin desktopUp {
+	@media #{$desktopUp} {
+		@content;
+	}
+}
+
+@mixin widescreenUp {
+	@media #{$widescreenUp} {
+		@content;
+	}
+}
+
+// Usage example:
+// .your-class {
+// 	@include tabletUp {
+// 		width: 90%;
+// 	}
+// }
+
+// Output:
+// @media (min-width: 768px) {
+// 	.your-class {
+// 		width: 90%;
+// 	}
+// }

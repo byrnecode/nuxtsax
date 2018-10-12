@@ -14,7 +14,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat' }
     ]
   },
 
@@ -43,10 +44,14 @@ module.exports = {
   modules: [
     'nuxt-sass-resources-loader'
   ],
-
-  // resources option for 'nuxt-sass-resources-loader'
+  
+  // Resources option for 'nuxt-sass-resources-loader' module.
+  // Make sure that the files that you import here contain only SASS code that doesn’t get rendered,
+  // such as variables, mixins and functions.
+  // Otherwise, that code will end up repeated for each component in the final css file.
   sassResources: [
-    '@/assets/scss/utilities/_variables.scss'
+    '@/assets/scss/utilities/_variables.scss',
+    '@/assets/scss/utilities/_breakpoint-mixins.scss'
   ],
 
   /*
