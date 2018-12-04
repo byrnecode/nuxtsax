@@ -26,7 +26,7 @@
 
 
     <!-- start Navigation Sidebar -->
-    <vs-sidebar parent="body" color="primary" class="sidebarx" spacer v-model="isSidebarOpen">
+    <vs-sidebar parent="body" color="primary" spacer v-model="isSidebarOpen">
 
       <div class="sidebar-header" slot="header">
         <vs-avatar  size="70px" src="https://avatars0.githubusercontent.com/u/14091662?s=88&v=4"/>
