@@ -45,17 +45,19 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-sass-resources-loader'
+    '@nuxtjs/style-resources'
   ],
   
-  // Resources option for 'nuxt-sass-resources-loader' module.
+  // Resources option for 'style-resources' module.
   // Make sure that the files that you import here contain only SASS code that doesn’t get rendered,
   // such as variables, mixins and functions.
   // Otherwise, that code will end up repeated for each component in the final css file.
-  sassResources: [
-    '@/assets/scss/utilities/_variables.scss',
-    '@/assets/scss/utilities/_breakpoint-mixins.scss'
-  ],
+  styleResources: {
+    scss: [
+      '~/assets/scss/utilities/_variables.scss',
+      '~/assets/scss/utilities/_breakpoint-mixins.scss'
+    ]
+  },
 
   /*
   ** Build configuration
