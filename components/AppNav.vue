@@ -9,7 +9,7 @@
       
       <vs-spacer></vs-spacer>
 
-      <vs-input vs-icon="search" placeholder="Search" v-model="search"/>
+      <vs-input icon="search" placeholder="Search" v-model="search"/>
       
       <ul class="vs-navbar-list--desktop">
         <vs-navbar-item 
@@ -20,7 +20,7 @@
         </vs-navbar-item>
       </ul>
 
-      <vs-button @click="isSidebarOpen = !isSidebarOpen" vs-type="flat" vs-icon="menu" class="vs-navbar-trigger"></vs-button>
+      <vs-button @click="isSidebarOpen = !isSidebarOpen" type="flat" icon="menu" class="vs-navbar-trigger"></vs-button>
     </vs-navbar>
     <!-- end Navigation Main -->
 
@@ -29,11 +29,11 @@
     <vs-sidebar parent="body" color="primary" spacer v-model="isSidebarOpen">
 
       <div class="sidebar-header" slot="header">
-        <vs-avatar  size="70px" src="https://avatars0.githubusercontent.com/u/14091662?s=88&v=4"/>
+        <vs-avatar size="70px" src="https://avatars0.githubusercontent.com/u/14091662?s=88&v=4"/>
 
         <h4>
           My Name
-          <vs-button color="primary" vs-icon="more_horiz" vs-type="flat"></vs-button>
+          <vs-button color="primary" icon="more_horiz" type="flat"></vs-button>
         </h4>
 
       </div>
@@ -72,8 +72,8 @@
       </vs-sidebar-item>
 
       <div class="sidebar-footer" slot="footer">
-        <vs-button vs-icon="reply" color="danger" vs-type="flat">log out</vs-button>
-        <vs-button vs-icon="settings" color="primary" vs-type="border"></vs-button>
+        <vs-button icon="reply" color="danger" type="flat">log out</vs-button>
+        <vs-button icon="settings" color="primary" type="border"></vs-button>
       </div>
 
     </vs-sidebar>
@@ -119,7 +119,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.vs-navbar .vs-navbar-item {
+.vs-navbar .vs-navbar--item {
   display: inline-block;
 }
 
